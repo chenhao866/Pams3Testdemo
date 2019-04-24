@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textColor="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_temp_sendbitrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发射率:"
+            android:textColor="@android:color/black"
+            android:textSize="28sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_temp_show_info"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@+id/et_temp_sendbitrate"
+            android:layout_margin="10dp"
+            android:background="#000000" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentTop="true"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="#ffffff" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#ffffff" />
+
+            <TextView
+                android:id="@+id/tv_temp_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="30.0"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_temp_sendbitrate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:ems="10"
+            android:textSize="25sp"
+            android:focusable="false"
+            android:inputType="numberDecimal"
+            android:minWidth="120dp"
+            android:text="0.99" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_tail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_temp_capture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:padding="5dp"
+            android:text="采集"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>
